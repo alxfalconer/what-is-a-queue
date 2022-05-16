@@ -23,22 +23,22 @@ class Queue {
 
   // return item at front of queue without removing it
   peek() {
-
+    return this.queue[0];
   }
 
   // return true if queue is empty, otherwise false
   isEmpty() {
-
+    return this.size() === 0;
   }
 
   // return true if queue is full, otherwise false
   isFull() {
-
+    return this.size() === this.limit;
   }
 
   // return number of items in queue
   size() {
-
+    return this.queue.length;
   }
 
   // return -1 if item not in queue, otherwise integer representing 
