@@ -44,17 +44,24 @@ class Queue {
   // return -1 if item not in queue, otherwise integer representing 
   // how far it is from the front
   search(target) {
-
+    return this.queue.indexOf(target);
   }
 
   // print contents of queue: do not return the queue itself!
   print() {
-    
+    console.log(this.queue.join(' -> '));
   }
 }
 
 if (require.main === module) {
   // add your own tests in here
+  const queue = new Queue();
+
+  console.log('size', queue.size());
+  console.log('is empty?', queue.isEmpty());
+  console.log('is full?', queue.isFull());
+  console.log('find 5', queue.search(5));
+  console.log('peek while empty', queue.peek());
 }
 
 module.exports = Queue;
