@@ -9,12 +9,16 @@ class Queue {
   // add item to rear of queue if not full
   // if full throw error
   enqueue(item) {
-
+    if (!this.isFull()) {
+      this.queue.push(item);
+    } else {
+      throw new Error('Queue is full!');
+    }
   }
 
   // remove item from front of queue and return it
   dequeue() {
-
+    return this.queue.shift();
   }
 
   // return item at front of queue without removing it
