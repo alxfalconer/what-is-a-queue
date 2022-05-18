@@ -64,4 +64,17 @@ if (require.main === module) {
   console.log('peek while empty', queue.peek());
 }
 
+for (let i = 0; i < 5; ++i) {
+  queue.enqueue(i);
+}
+
+console.log('ADD ITEMS 0 TO 4');
+console.log('size', queue.size());
+console.log('is empty?', queue.isEmpty());
+console.log('is full?', queue.isFull());
+console.log('find 3', queue.search(3));
+console.log('peek', queue.peek());
+queue.print();
+
+
 module.exports = Queue;
