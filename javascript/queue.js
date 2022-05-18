@@ -76,5 +76,34 @@ console.log('find 3', queue.search(3));
 console.log('peek', queue.peek());
 queue.print();
 
+for (let i = 5; i < 10; ++i) {
+  queue.enqueue(i);
+}
+
+console.log('ADD ITEMS 5 TO 9');
+console.log('size', queue.size());
+console.log('is empty?', queue.isEmpty());
+console.log('is full?', queue.isFull());
+console.log('find 3', queue.search(3));
+console.log('peek', queue.peek());
+queue.print();
+
+console.log('dequeue', queue.dequeue());
+console.log('size', queue.size());
+console.log('is empty?', queue.isEmpty());
+console.log('is full?', queue.isFull());
+console.log('peek', queue.peek());
+queue.print();
+
+console.log('GENERATE ERROR');
+queue.enqueue(10);
+
+try {
+  queue.enqueue(11);
+} catch(err) {
+  console.log(err);
+  queue.print();
+}
+
 
 module.exports = Queue;
